@@ -16,19 +16,18 @@ class UserController < ApplicationController
     
             user = User.create(fullname: fullname, email: email, phonenumber: phonenumber)
             user.save
-        if(fullname.present? && email.present? && phonenumber.present?)
-            if user
-                message = {:successful => "user created successfull"}
-                message.to_json
+            if(fullname.present? && email.present? && phonenumber.present?)
+                if user
+                    message = {:successful => "user created successfull"}
+                    message.to_json
+                else
+                    message = {:error => "user not created !!"}
+                    message.to_json
+                end  
             else
-                message = {:error => "user not created !!"}
-                message.to_json
-            end  
-        else
-            message = {:error => "All fields should be filled !!"}
-                message.to_json
-        end 
+                message = {:error => "All fields should be filled !!"}
+                    message.to_json
+            end 
         end
-        
-end
+    end
 end

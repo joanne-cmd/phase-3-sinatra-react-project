@@ -9,6 +9,10 @@ class CategoryController < ApplicationController
      category.to_json()
     end
 
+    get "category/:id/item" do
+        
+    end
+
     post "/category/" do
         category= Category.create(
             name: params[:name]
