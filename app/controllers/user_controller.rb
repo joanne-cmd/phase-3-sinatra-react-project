@@ -1,8 +1,23 @@
 class UserController < ApplicationController
+    set :default_content_type, 'application/json'
     get "/users" do
         users= User.all
         users.to_json()
     end
+    get "/user/:id" do 
+        users = User.find_by(id: params[:id])
+        users.to_json()
+      end
+
+      delete "/user/:id" do
+        users = User.find_by(id: params[:id])
+        users.destroy
+        {
+            "message": "succesfull deleted  user",
+            "statu": "HTTP_status_ok"
+          }.to_json()
+    
+        end
 
     post "/users/" do
         existing_user= user.find_by(email: params[:email])

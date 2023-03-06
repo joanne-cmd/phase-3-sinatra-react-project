@@ -4,7 +4,7 @@ puts "🌱 Seeding spices..."
 # Seed your database here
 
 # create user instance
-12.times do
+50.times do
     User.create(
         fullname: Faker::Name.name,
         email: Faker::Internet.email,
@@ -15,7 +15,7 @@ end
 
 CATEGORY = [:cleaning, :Drinks, :Meats, :Meals, :Dairy, :Fruits, :Vegetables, :Hygiene, :Groceries, :Bakery, :Health, :Beauty]
 
-12.times do
+50.times do
     category = CATEGORY.sample 
     Item.create(
         name: Faker::Name.name,
