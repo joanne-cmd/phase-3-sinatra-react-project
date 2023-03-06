@@ -5,7 +5,7 @@
 ## Introduction
 
 Shopping list app  is a  project that has both backend and frontend, the backend is composed of the sinatra Api that the app uses to access and persist data in the database.This  small help users to remember of the things that they were planning to buy  and help them be on truck  of the things they alreadt have.
-in this app one can add ,updated, create and delete an Item.
+in this app one can add ,updated, create and delete an Item.link to the frontend app(https://fastidious-granita-34813b.netlify.app/)
 
 ## Requirements
 1. Ruby(https://ruby-doc.org/core-2.7.3/Hash.html)
