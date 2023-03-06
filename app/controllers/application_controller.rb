@@ -3,9 +3,9 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   get "/" do
-   categories= Category.all #get all categories
-   categories.to_json()
-  end
+    items= Item.all
+    items.to_json()
+end
   
 
 

@@ -1,4 +1,4 @@
 class Item <  ActiveRecord::Base
    belongs_to :user
-   belongs_to :category
+   enum category: [:cleaning, :Drinks, :Meats, :Meals, :Dairy, :Fruits, :Vegetables, :Hygiene, :Groceries, :Bakery, :Health, :Beauty]
 end

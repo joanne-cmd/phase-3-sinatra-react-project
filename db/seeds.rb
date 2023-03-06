@@ -2,10 +2,7 @@
 puts "🌱 Seeding spices..."
 
 # Seed your database here
-# create category instance
-12.times do
-    Category.create(name: Faker::Name.name)
-end
+
 # create user instance
 12.times do
     User.create(
@@ -15,14 +12,18 @@ end
     )
 end
 # create item instance
+
+CATEGORY = [:cleaning, :Drinks, :Meats, :Meals, :Dairy, :Fruits, :Vegetables, :Hygiene, :Groceries, :Bakery, :Health, :Beauty]
+
 12.times do
+    category = CATEGORY.sample 
     Item.create(
         name: Faker::Name.name,
         image_url: "https://cdn.pixabay.com/photo/2018/02/09/21/46/rose-3142529__340.jpg",
         description: Faker::Lorem.paragraph,
+        category: category,
         user_id: rand(User.first.id..User.last.id),
-        category_id: rand(Category.first.id..Category.last.id)
-
+        
     )
 end
 

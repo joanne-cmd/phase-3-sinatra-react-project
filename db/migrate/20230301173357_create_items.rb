@@ -4,8 +4,8 @@ class CreateItems < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :image_url
       t.string :description
+      t.string :category
       t.references :user, foreign_key: true
-      t.references :category, foreign_key: true
     end
   end
 end
